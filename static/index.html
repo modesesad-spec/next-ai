@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXA AI — Supercharged</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <img id="avatar-img" src="https://i.imgur.com/default_avatar.png" alt="Avatar" onclick="gantiAvatar()">
+                <div>
+                    <h2>NEXA</h2>
+                    <span class="badge">Online</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <button onclick="startVoice()">🎤 Voice</button>
+                <button onclick="document.getElementById('fileUpload').click()">📁 Upload</button>
+                <button onclick="resetSession()">🔄 Reset</button>
+                <button onclick="window.open('/dashboard', '_blank')">📊 Stats</button>
+            </div>
+        </header>
+
+        <div id="chat-box"></div>
+
+        <div class="input-area">
+            <input id="user-input" placeholder="Ketik /deep, /role marketer, /schedule meeting 2026-08-20">
+            <button onclick="send()">Kirim</button>
+        </div>
+
+        <input type="file" id="fileUpload" style="display:none" onchange="handleFileUpload(this)">
+        <div class="info">
+            <small>Commands: /deep, /fast, /creative, /code, /data, /teach, /role, /schedule, /image, /upload, /stats</small>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
