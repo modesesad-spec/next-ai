@@ -1,0 +1,22 @@
+{
+    "builds": [
+        {
+            "src": "api/nexa.py",
+            "use": "@vercel/python"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/nexa",
+            "dest": "api/nexa.py"
+        },
+        {
+            "src": "/api/reset",
+            "dest": "api/nexa.py"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/static/index.html"
+        }
+    ]
+}
